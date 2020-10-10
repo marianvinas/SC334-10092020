@@ -1,6 +1,11 @@
+from datetime import datetime
+from flask import Flask, render_template
 from flask_sqlalchemy import SQLAlchemy
+import openaq
 
-APP.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///db.sqlite3'
+APP = Flask(__name__)
+APP.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////Users/marianvinas/SC334-10092020/db.sqlite3'
+APP.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 DB = SQLAlchemy(APP)
 
 
