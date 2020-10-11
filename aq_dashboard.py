@@ -4,9 +4,8 @@ from flask_sqlalchemy import SQLAlchemy
 import openaq
 
 APP = Flask(__name__)
-APP.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////Users/marianvinas/SC334-10092020/db.sqlite3'
+APP.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////Users/db.sqlite3'
 DB = SQLAlchemy(APP)
-
 
 class Record(DB.Model):
     id = DB.Column(DB.Integer, primary_key=True)
